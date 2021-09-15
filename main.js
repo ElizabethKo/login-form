@@ -1,5 +1,6 @@
 import Validator from './js/validator.js';
 import Showpsw from './js/showpsw.js';
+import {Config} from './config/default.js';
 
 const validator = new Validator();
 const showPsw = new Showpsw();
@@ -29,13 +30,13 @@ form.addEventListener('submit', (e) => {
 
     let response = (async () => {
         try {
-            const resp =  await fetch("https://app.fakejson.com/q", {
+            const resp =  await fetch(Config.uri, {
                 method: 'POST',
                 headers: new Headers({
                     'Content-Type': 'application/json',
                 }),
                 body: JSON.stringify({
-                    token: "8hcDvWy8S2QmGCyJYKgYOQ",
+                    token: Config.token,
                     data: {
                         dateToday: "dateToday",
                         email: email.value,
