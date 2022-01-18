@@ -1,6 +1,6 @@
 import Validator from './js/validator.js';
 import Showpsw from './js/showpsw.js';
-import {Config} from './config/default.js';
+import {Config} from './config/default.sample.js';
 
 const validator = new Validator();
 const showPsw = new Showpsw();
